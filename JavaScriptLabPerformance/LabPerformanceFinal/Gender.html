@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Gender</title>
+</head>
+<body>
+	
+	<h1>Gender Validation</h1>
+
+	
+
+
+	<form> 
+	    Gender:
+		<input type="radio" name="gender"  value="male"" onblur="validateEmail()" /><br> 
+		
+		<<input type="radio" name="gender"  value="male"" onblur="validateEmail()" /><br> 
+		value="female">Female
+		<input type="radio" name="gender" <?php if (isset($gender) && $gender=="others") echo "checked";?> 
+		value="others">Others <br>
+		
+		<input name="ername" type="text" name="" value="" onblur="validateGender()" /><br> <p name="msg"></p>
+		
+	</form>
+
+	<script>
+		
+
+function validateGender()
+{
+	var gender = document.getElementsByName('gender');
+	var flag = "";
+	for (var i = 0; i < gender.length; i++) {
+		if(gender[i].checked)
+		{
+			flag = gender[i].value;
+			break;
+		}
+		else
+		{
+			flag = "Empty Value";
+		}
+	}
+	return flag;
+}
+
+}
+	</script>
+</body>
+</html>

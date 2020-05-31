@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Name</title>
+</head>
+<body>
+	
+	<h1>Name Validation</h1>
+
+	
+
+
+	
+
+	<script>
+		
+
+function validateName() {
+	var ername = document.getElementById('ename');
+	var name = document.getElementById('1').value;
+	
+	if (name == "") 
+	{
+		ername.innerHTML = "Name can not be empty.";
+	}
+	else {
+		if(letterValid(name))
+		{
+			ername.innerHTML = "";
+		}
+		else
+		{
+			ername.innerHTML = "Name can not Valid.";
+		}
+	}
+	
+}
+	</script>
+	
+		<form>
+	    Name:
+		<input name="name" type="text" name=" "id="1" onkeyup="validateName()"/><br> <p name="name"></p>
+		<div id="ename"> </div>
+		<input type="button" name="Submit" value="Submit" onclick="validateName()">
+	</form>
+</body>
+</html>

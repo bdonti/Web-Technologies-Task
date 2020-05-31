@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Name</title>
+</head>
+<body>
+	
+	<h1>Name Validation</h1>
+
+	
+
+
+	<form>
+	    Email:
+		<input name="email" type="text" name="" value="" onblur="validateEmail()" /><br> <p id="msg"></p>
+		
+		<input name="eremail" type="text" name="" value="" onblur="validateEmail()" /><br> <p id="msg"></p>
+		<input type="button" name="btn" value="Click" onclick="f1()">
+	</form>
+
+	<script>
+		
+
+function validateEmail(){
+	var email = document.getElementById('1').value;
+	var eremail = document.getElementById('eemail');
+
+	if (email == "") {
+		eremail.innerHTML = "Email can not be empty.";
+	}
+	else {
+		if(Email(email))
+		{
+			eremail.innerHTML = "";
+		}
+		else
+		{
+			eremail.innerHTML = "Email can not Valid.";
+		}
+	}
+
+}
+	</script>
+</body>
+</html>
